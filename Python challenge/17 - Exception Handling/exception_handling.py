@@ -1,4 +1,4 @@
-'''
+
 try:
     name = input('Enter your name:')
     year_born = input('Year you were born:')
@@ -6,8 +6,7 @@ try:
     print(f'You are {name}. And your age is {age}.')
 except:
     print('Something went wrong')
-'''
-'''
+
 try:
     name = input('Enter your name:')
     year_born = input('Year you born:')
@@ -15,7 +14,7 @@ try:
     print(f'You are {name}. And your age is {age}.')
 except Exception as e:
     print(e)
-'''
+
 
 
 
@@ -30,10 +29,10 @@ numbers = range(2, 7)  # normal call with separate arguments
 
 args = [2, 7]
 numbers = range(*args)  # call with arguments unpacked from a list
-#print(numbers)      # [2, 3, 4, 5,6]
+print(numbers)      # [2, 3, 4, 5,6]
 countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
 fin, sw, a, *rest = countries
-#print(fin, sw, a, rest)  # Finland Sweden Norway ['Denmark', 'Iceland']
+print(fin, sw, a, rest)  # Finland Sweden Norway ['Denmark', 'Iceland']
 
 
 
@@ -70,14 +69,13 @@ def packing_person_info(**kwargs):
         print(f"{key} = {kwargs[key]}")
     return kwargs
 
-#print(packing_person_info(name="Asabeneh",
-# country="Finland", city="Helsinki", age=250))
-
-# name = Asabeneh
-# country = Finland
-# city = Helsinki
-# age = 250
-# {'name': 'Asabeneh', 'country': 'Finland', 'city': 'Helsinki', 'age': 250}
+print(packing_person_info(name="Asabeneh",
+ country="Finland", city="Helsinki", age=250))
+ name = Asabeneh
+ country = Finland
+ city = Helsinki
+ age = 250
+ {'name': 'Asabeneh', 'country': 'Finland', 'city': 'Helsinki', 'age': 250}
 
 
 #### Spreading in Python
@@ -115,7 +113,7 @@ for f, v in zip(fruits, vegetables):
       ####   Exercises: Day 16 ####
 
 
-
+# Unpack the first five countries and store them in a variable nordic_countries, store Estonia and Russia in es, and ru respectively.
 names = ['Finland', 'Sweden', 'Norway','Denmark','Iceland', 'Estonia','Russia']
 
 
