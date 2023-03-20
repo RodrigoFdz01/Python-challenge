@@ -12,7 +12,7 @@
 
 # read 
 
-f = open('test.txt')
+# f = open('test.txt')
 #print(f) # <_io.TextIOWrapper name='./files/reading_file_example.txt' mode='r' encoding='UTF-8'>
 
 ### Un archivo abierto debe cerrarse con el método close() .
@@ -50,18 +50,32 @@ person_json = '''{
 import json
 # let's change JSON to dictionary
 person_dct = json.loads(person_json)
-print(type(person_dct))
-print(person_dct)
-print(person_dct['name'])
+# print(type(person_dct))
+# print(person_dct)
+# print(person_dct['name'])
 
 #Archivo con extensión xlsx
 #Para leer archivos de Excel necesitamos instalar el paquete xlrd . 
 # Cubriremos esto después de que cubramos la instalación del paquete usando pip.
 
 import xlrd
-excel_book = xlrd.open_workbook('sample.xls')
-print(excel_book.nsheets)
-print(excel_book.sheet_names)
+#excel_book = xlrd.open_workbook('sample.xls')
+# print(excel_book.nsheets)
+# print(excel_book.sheet_names)
 
 
 ##### Exercises: Day 19- file handling ########
+
+# Read obama_speech.txt file and count number of lines and words 
+
+with open ('obama_speech.txt') as file:
+    lines_obama = file.readlines()
+    print(len(lines_obama))
+
+with open ('obama_speech.txt') as file:
+    data = file.read()
+    words = data.split()
+    print(len(words))
+    
+
+    
