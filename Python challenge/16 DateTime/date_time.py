@@ -155,3 +155,18 @@ time_today= now - date_one
 print(time_today) 
 #19347 days, 13:51:26.426154
 '''
+
+# 6 - Age Calculator 
+
+#To create an age calculator, you need two dates:
+
+# 1 today’s date
+# 2 date of birth
+
+def ageCalculator(y, m, d):
+    import datetime
+    today = datetime.datetime.now().date()
+    date_of_birth = datetime.date(y, m, d)
+    age = int((today-date_of_birth).days / 365.25)
+    print(age)
+ageCalculator(1983, 7, 1)
